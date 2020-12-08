@@ -1,0 +1,394 @@
+:root {
+  --text: #000000;
+  --navigation-height: 50px;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;500;600;700;800;900&display=swap");
+@import url("/Argesta_Webfont/stylesheet.css");
+
+/* utilities */
+.position-sticky {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}
+.pointer {
+  cursor: pointer;
+}
+
+body {
+  margin: 0;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.1;
+  font-family: "Inter", sans-serif;
+  color: var(--text);
+}
+
+section {
+  display: grid;
+}
+
+a {
+  background-image: none;
+  text-decoration: underline;
+}
+
+main {
+  grid-column: 3 / span 8;
+  display: grid;
+}
+
+ul {
+  margin-left: 20px;
+  margin-right: 40px;
+  font-style: italic;
+  font-size:inherit;
+  list-style-type:square;
+}
+
+li {
+  margin-top: 2vh;
+}
+
+/* Typography */
+
+strong {
+  font-weight: 600;
+  font-family: "Inter", sans-serif;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: 100;
+  font-family: "Argesta Display", serif;
+}
+
+h2 {
+  font-size: 1.75em;
+  font-family: "Inter", sans-serif;
+}
+
+h3 {
+  font-size: 1.4em;
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+h4 {
+  font-size: 1em;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+.bigP {
+  margin-top: 0px;
+  font-size: 2em;
+  line-height: 1.5em;
+  font-family: "Argesta Display", serif;
+}
+
+.smallP {
+  margin-top: 0px;
+  font-size: 1.2em;
+  line-height: 1.2em;
+  font-family: "Argesta Display", serif;
+}
+
+/* Introduction text */
+
+.intro{
+  margin-top:5vh;
+}
+
+.intro h1 {
+  color: black;
+  font-size: 3em;
+  font-style: regular;
+  line-height: 1.5em;
+  font-weight: 600;
+  font-family: "Inter", sans-serif;
+  text-shadow: none;
+  text-transform: unset;
+}
+
+.introBox {
+  top:var(--navigation-height);
+  overflow-y: hidden;
+  border-bottom: none;
+}
+
+/* Page organizers */
+/* Consortium groups */
+
+.groups {
+  margin-bottom:7vh;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.groups1 {
+  grid-column: 1 / span 3;
+}
+
+.groups2 {
+  grid-column: 5 / span 2;
+}
+
+/* Images */
+.sideImg {
+  grid-column: 8 / span 5;
+  margin: 0px;
+  width: 100%;
+}
+
+/* Parallax base styles  */
+.parallax {
+  height: 80vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-perspective: 300px;
+  perspective: 300px;
+}
+
+.parallaxGroup {
+  position: relative;
+  height: 100vh;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.parallaxLayer {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.parallaxLayerBase {
+
+  transform: translateZ(0);
+  z-index: 4;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.parallaxLayerBack {
+
+  transform: translateZ(-300px) scale(2);
+  z-index: 3;
+}
+
+.square1{
+  top: 30%;
+  width: 250px;
+  height: 250px;
+  backdrop-filter: blur(5px);
+  border: 1px solid black;
+}
+
+.square2{
+  top: 100%;
+  left:50%;
+  width: 250px;
+  height: 250px;
+  backdrop-filter: blur(5px);
+  border: 1px solid black;animation: gradient 15s ease infinite;
+}
+
+@supports ( (-webkit-backdrop-filter: blur(5px)) or (backdrop-filter: blur(5px)) ) {
+  .square1, .square2 {
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+  }
+
+  .parallaxLayerBack{
+    transform: translateZ(-300px) scale(2);
+  }
+}
+
+/* no support backdrop-filter */
+@supports ( not ( (-webkit-backdrop-filter: blur(5px)) or (backdrop-filter: blur(5px)) ) ) {
+  .square1, .square2{
+    background: linear-gradient(-45deg, rgba(255,255,254), rgba(255,255,249,0.5));
+    animation: gradient 15s ease infinite;
+    background-size: 200% 200%;
+  }
+
+  .square2{
+    top: 50%;
+  }
+
+  .navbar{
+    background-color: red;
+  }
+
+
+  .parallaxLayerBack{
+    transform: translateZ(-100px) scale(1);
+  }
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+#group1 {
+  z-index: 5; /* slide over group 2 */
+}
+
+#group2 {
+  z-index: 3; /* slide under groups 1 and 3 */
+}
+
+
+/* Media queries */
+@media only screen and (max-width: 600px) {
+.parallaxLayerBack{
+  transform: translateZ(-100px) scale(1);
+}
+/* 
+.parallaxLayer {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  right: 0;
+  bottom: 0%;
+}
+
+.parallax {
+  height: 80vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-perspective: 100px;
+  perspective: 100px;
+}
+
+.parallaxGroup {
+  position: relative;
+  height: 80vh;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.square1{
+  top: 50%;
+  width: 250px;
+  height: 250px;
+  backdrop-filter: blur(5px);
+  border: 1px solid black;
+  animation: gradient 15s ease infinite;
+}
+
+.square2{
+  top: 100%;
+  left:33%;
+  width: 250px;
+  height: 250px;
+  backdrop-filter: blur(5px);
+  border: 1px solid black;
+  animation: gradient 15s ease infinite;
+}
+ */
+
+}
+
+
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 2em;
+  }
+.intro h1{
+  font-size: 2em;
+}
+  h2 {
+    font-size: 1.5em;
+    font-weight: 700;
+  }
+
+  h3 {
+    font-size: 1em;
+    line-height: 2em;
+    font-weight: 500;
+  }
+
+  h4 {
+    font-size: 0.8em;
+  }
+
+  main {
+    grid-column: 2 / span 10;
+    display: grid;
+  }
+
+  .introBox {
+    margin-top: 1em;
+    height: 40vh;
+    overflow-y: scroll;
+    padding: 1em 0;
+    border-bottom: 2px solid black;
+  }
+
+  /* Page organizers */
+  .groups {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .groups1 {
+    display: grid;
+    grid-column: 1 / span 3;
+  }
+
+  .groups2 {
+    display: grid;
+    grid-column: 1 / span 3;
+  }
+
+  .navbar a {
+    font-size: 0.6em;
+    display: flex;
+  }
+
+  .bigP {
+    font-size: 1.6em;
+    line-height: 1.3em;
+    font-family: "Argesta Display", serif;
+    grid-column: 2 / span 6;
+  }
+
+  .item1 {
+    grid-column: 2 / span 2;
+  }
+
+  .item2 {
+    grid-column: 6 / span 2;
+  }
+
+  .item3 {
+    grid-column: 10 / span 2;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}
+

@@ -1,0 +1,23 @@
+
+[
+  {
+    "label": "Home",
+    "url": "/",
+    "menues": ["main"]
+  },
+  {
+    "label": "Project",
+    "url": "/about",
+    "menues": ["main"]
+  },
+  {
+    "label": "Consortium",
+    "url": "/consortium",
+    "menues": ["main"]
+  },
+  {
+    "label": "Methodology",
+    "url": "/methodology",
+    "menues": ["main"]
+  }
+]

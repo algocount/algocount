@@ -1,0 +1,45 @@
+.social {
+  grid-template-columns: repeat(12, 1fr);
+  display: grid;
+  margin-top: 5vh;
+  text-align: left;
+}
+
+.social p {
+  grid-column: 1 / span 12;
+  margin-left: 0;
+  line-height: 1.3em;
+  font-family: "Argesta Display", serif;
+}
+
+.social button {
+  border: 1px solid var(--text);
+  background-color: white;
+  border-radius: 50px;
+  margin-top: 10px;
+  margin-right: 10px;
+  text-align: center;
+  padding: 0px;
+}
+
+.social button:hover {
+  filter: blur(2px);
+  transition-duration: 0.3s;
+  cursor: pointer;
+}
+
+.socialItem1 {
+  grid-column: 1 / span 3;
+}
+
+.socialItem2 {
+  grid-column: 1 / span 3;
+}
+
+.socialItem3 {
+  grid-column: 1 / span 3;
+}
+
+.social a {
+  font-size: 0.5em !important;
+}
