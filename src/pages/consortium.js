@@ -1,10 +1,12 @@
 import React from "react"
-import Container from "../components/container"
+
 import Layout from "../components/layout"
+import Container from "../components/container"
+import Phases from "../components/phases"
+import Header from "../components/header"
 
 import "../styles/global.css"
 
-import containerStyles from "../components/container.module.css"
 
 export default function Consortium() {
   return (

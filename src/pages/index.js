@@ -2,6 +2,7 @@ import React from "react"
 
 import Layout from "../components/layout"
 import Container from "../components/container"
+import Phases from "../components/phases"
 import Header from "../components/header"
 
 import "../styles/global.css"
