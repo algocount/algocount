@@ -1,6 +1,6 @@
 module.exports = 
 {
-  pathPrefix: "/algocount",
+  pathPrefix: "/algocountweb",
 },
 {
   plugins: [
