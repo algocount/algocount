@@ -11,7 +11,7 @@ export default function About() {
       <Container>
         <main>
           <div className="intro">
-            <p>THE PROJECT</p>
+            <p>THE ALGOCOUNT PROJECT</p>
             <div className="introBox">
               <h1>
                 In the context of a society pervasively intermediated by digital
