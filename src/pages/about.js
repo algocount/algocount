@@ -1,9 +1,9 @@
-import React from "react"
+import React from "react";
 
-import Layout from "../components/layout"
-import Container from "../components/container"
-import Phases from "../components/phases"
-import Header from "../components/header"
+import Layout from "../components/layout";
+import Container from "../components/container";
+import Phases from "../components/phases";
+import Header from "../components/header";
 
 export default function About() {
   return (
@@ -11,7 +11,7 @@ export default function About() {
       <Container>
         <main>
           <div className="intro">
-            <p>THE ALGOCOUNT PROJECT</p>
+            <p>THE ALGOCOUNT PROJECT - </p>
             <div className="introBox">
               <h1>
                 In the context of a society pervasively intermediated by digital
@@ -85,5 +85,5 @@ export default function About() {
         </main>
       </Container>
     </Layout>
-  )
+  );
 }
