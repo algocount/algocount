@@ -11,7 +11,7 @@ export default function About() {
       <Container>
         <main>
           <div className="intro">
-            <p>NON FUNZIONA MAI</p>
+            <p>THE RESEARCH PROCESS</p>
             <div className="introBox">
               <h1>
                 In the context of a society pervasively intermediated by digital
