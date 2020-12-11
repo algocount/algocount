@@ -1,8 +1,9 @@
-module.exports = 
-{
-  pathPrefix: "/algocountweb",
-},
-{
+module.exports = {
+  siteMetadata: {
+    title: `Algocount`,
+    siteUrl: `https://algocount.org/`,
+    description: `Public Perception of Algorithms in Society. Accounting for the Algorithmic Public Opinion`,
+  },
   plugins: [
     "gatsby-plugin-mdx",
     {
