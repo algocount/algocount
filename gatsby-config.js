@@ -5,14 +5,22 @@ module.exports = {
     description: `Public Perception of Algorithms in Society. Accounting for the Algorithmic Public Opinion`,
   },
   plugins: [
-    "gatsby-plugin-mdx",
-    {
-      resolve: "gatsby-source-filesystem",
+      `gatsby-plugin-sharp`,
+      `gatsby-transformer-sharp`,
+      `gatsby-transformer-remark`,
+      {
+        resolve: `gatsby-source-filesystem`,
       options: {
-        name: "pages",
-        path: "./src/pages/",
+        name: `markdown-pages`,
+        path: `${__dirname}/src/markdown-pages`,
       },
-      __key: "pages",
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
+      },
     },
   ],
-};
+}

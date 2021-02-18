@@ -19,5 +19,11 @@
     "label": "Methodology",
     "url": "/methodology",
     "menues": ["main"]
+  },
+  {
+    "label": "News",
+    "url": "/news",
+    "menues": ["main"]
   }
+
 ]

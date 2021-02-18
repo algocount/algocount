@@ -123,6 +123,17 @@ h4 {
 }
 
 /* Page organizers */
+
+/* Blog Post */
+.blogbox {
+  border:1px solid black;
+  padding:1em;
+}
+
+.blog a{
+font-size: 1em;
+}
+
 /* Consortium groups */
 
 .groups {
