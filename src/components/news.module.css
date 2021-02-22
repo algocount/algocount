@@ -1,0 +1,41 @@
+/* Blog Post */
+
+.blogBox {
+  border: 1px solid black;
+  padding: 1em;
+  width: 50%;
+  transition-duration: 0.3s;
+}
+
+.blogBox:hover {
+  filter: blur(2px);
+}
+
+.blog a {
+  font-size: 1em;
+}
+
+.blog {
+  grid-template-columns: repeat(12, 1fr);
+  display: grid;
+}
+
+.blog p {
+  margin-top: 0px;
+  font-size: 1.3em;
+  line-height: 1.3em;
+  font-family: "Argesta Display", serif;
+}
+
+.blogHeader {
+  grid-column: 1 / span 12;
+}
+
+.blogContent {
+  grid-column: 1 / span 8;
+  margin-top:1em;
+}
+
+.blogImg {
+    margin-bottom:2em;
+}

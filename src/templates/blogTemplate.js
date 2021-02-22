@@ -3,27 +3,37 @@ import { graphql } from "gatsby";
 
 import Layout from "../components/layout";
 import Container from "../components/container";
-import Img from "gatsby-image"
+import Img from "gatsby-image";
 
+import newsStyles from "../components/news.module.css";
 
 export default function Template({ data }) {
-    let post = data.markdownRemark
-    let featuredImgFluid = post.frontmatter.featuredImage.childImageSharp.fluid
+  let post = data.markdownRemark;
+  let featuredImgFluid = post.frontmatter.featuredImage.childImageSharp.fluid;
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
   return (
     <Layout>
       <Container>
-        <main className="bigP">
-        <Img fluid={featuredImgFluid} />
-        <h4>{frontmatter.date}</h4>
-          <h1>{frontmatter.title}</h1>
-          <h3>{frontmatter.text}</h3>
-          <p>Participants: {frontmatter.members}</p>
-          <div
-            className="blog-post-content"
-            dangerouslySetInnerHTML={{ __html: html }}
-          />
+        <main>
+          <div className={`blog ${newsStyles.blog}`}>
+            <section className={`blogHeader ${newsStyles.blogHeader}`}>
+              <div className={`blogImg ${newsStyles.blogImg}`}>
+                <Img fluid={featuredImgFluid} />
+              </div>
+              <p>Published on {frontmatter.date}</p>
+              <h2>{frontmatter.title}</h2>
+              <p>{frontmatter.text}</p>    
+            </section>
+            <section className={`blogContent ${newsStyles.blogContent}`}>
+            <h3>AUTHORS:</h3>
+            <h4>{frontmatter.authors}</h4>
+            </section>
+            <section
+              className={`blogContent ${newsStyles.blogContent}`}
+              dangerouslySetInnerHTML={{ __html: html }}
+            />
+          </div>
         </main>
       </Container>
     </Layout>
@@ -39,14 +49,14 @@ export const pageQuery = graphql`
         slug
         title
         text
-        members
+        authors
         featuredImage {
-            childImageSharp {
-              fluid(maxWidth: 1000) {
-                ...GatsbyImageSharpFluid
-              }
+          childImageSharp {
+            fluid(maxWidth: 3000) {
+              ...GatsbyImageSharpFluid
             }
           }
+        }
       }
     }
   }

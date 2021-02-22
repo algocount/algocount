@@ -5,6 +5,8 @@ import { Link } from "gatsby";
 import Container from "../components/container";
 import PostLink from "../components/post-link";
 
+import newsStyles from "../components/news.module.css"
+
 const News = ({
   data: {
     allMarkdownRemark: { edges },
@@ -29,7 +31,7 @@ const News = ({
               </h1>
             </div>
           </div>
-          <div className="blog">
+          <div>
             <div>{Posts}</div>
           </div>
         </main>
@@ -50,7 +52,7 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             slug
             title
-            members
+            authors
             text
           }
         }

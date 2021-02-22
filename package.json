@@ -28,7 +28,7 @@
     "gatsby-plugin-mdx": "^1.6.0",
     "gatsby-plugin-sharp": "^2.14.1",
     "gatsby-remark-images": "^3.11.0",
-    "gatsby-source-filesystem": "^3.0.0-next.2",
+    "gatsby-source-filesystem": "^3.0.0-next.3",
     "gatsby-transformer-remark": "^3.0.0-next.0",
     "gatsby-transformer-sharp": "^2.12.0",
     "p5": "^1.1.9",

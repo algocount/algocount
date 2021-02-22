@@ -67,11 +67,12 @@ h1 {
 
 h2 {
   font-size: 1.75em;
+  line-height: 1.3em;
   font-family: "Inter", sans-serif;
 }
 
 h3 {
-  font-size: 1.4em;
+  font-size: 1.25em;
   font-family: "Inter", sans-serif;
   font-weight: 300;
   text-transform: uppercase;
@@ -79,8 +80,9 @@ h3 {
 
 h4 {
   font-size: 1em;
+  line-height: 1.5em;
   font-family: "Inter", sans-serif;
-  font-weight: 600;
+  font-weight: 800;
   text-transform: uppercase;
   margin-bottom: 0;
 }
@@ -92,12 +94,16 @@ h4 {
   font-family: "Argesta Display", serif;
 }
 
-.smallP {
+.smallP p {
   margin-top: 0px;
   font-size: 1.2em;
   line-height: 1.2em;
   font-family: "Argesta Display", serif;
 }
+
+
+/* Blog */
+
 
 /* Introduction text */
 
@@ -123,16 +129,6 @@ h4 {
 }
 
 /* Page organizers */
-
-/* Blog Post */
-.blogbox {
-  border:1px solid black;
-  padding:1em;
-}
-
-.blog a{
-font-size: 1em;
-}
 
 /* Consortium groups */
 
@@ -328,7 +324,7 @@ font-size: 1em;
 }
   h2 {
     font-size: 1.5em;
-    font-weight: 700;
+    font-weight: 500;
   }
 
   h3 {
