@@ -1,5 +1,5 @@
 ---
-slug: "/blog/my-first-post"
+slug: "/blog/datasprint"
 date: "2020-02-20"
 title: "The Algocount Datasprint on Digital Methods"
 text: "During the Data Sprint participants worked on research projects in small groups. Each group, composed by researchers in  Design and Social and Political Sciences focused on gathering and visualising data related to a specific social media platform."
