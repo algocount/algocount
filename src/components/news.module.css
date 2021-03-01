@@ -3,8 +3,8 @@
 .blogBox {
   border: 1px solid black;
   padding: 1em;
-  width: 50%;
   transition-duration: 0.3s;
+  margin-top:2em;
 }
 
 .blogBox:hover {
@@ -29,10 +29,12 @@
 
 .blogHeader {
   grid-column: 1 / span 12;
+  border-bottom:1px solid black;
+  margin-bottom:2em;
 }
 
 .blogContent {
-  grid-column: 1 / span 8;
+  grid-column: 1 / span 9;
   margin-top:1em;
 }
 

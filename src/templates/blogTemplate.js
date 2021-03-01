@@ -25,10 +25,6 @@ export default function Template({ data }) {
               <h2>{frontmatter.title}</h2>
               <p>{frontmatter.text}</p>    
             </section>
-            <section className={`blogContent ${newsStyles.blogContent}`}>
-            <h3>AUTHORS:</h3>
-            <h4>{frontmatter.authors}</h4>
-            </section>
             <section
               className={`blogContent ${newsStyles.blogContent}`}
               dangerouslySetInnerHTML={{ __html: html }}
