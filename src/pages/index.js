@@ -17,12 +17,15 @@ export default function Home() {
               <div id="group2" className="parallaxGroup">
                 <div className="parallaxLayer parallaxLayerBase square1"></div>
                 <div className="parallaxLayer parallaxLayerBase square2"></div>
-                <div className="parallaxLayer parallaxLayerBack" style={{ bottom: "90%" }}>
-                </div>
-                <div className="intro" style={{ zIndex: "999999" }}>
+
+                <div
+                  className="parallaxLayer parallaxLayerBack "
+                  style={{ bottom: "90%" }}
+                >
+                  <div className="intro" style={{ zIndex: "999999" }}>
                     <h1>
                       The Public Perception of Algorithms in Society: Accounting
-                      for the Algorithmic Public Opinion.
+                      for the Algorithmic Public Opinion.{" "}
                     </h1>
                     <h1>
                       Algocount project seeks to expand our current
@@ -31,6 +34,7 @@ export default function Home() {
                       formation of public opinion in the Italian context.
                     </h1>
                   </div>
+                </div>
               </div>
             </div>
           </div>

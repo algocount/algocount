@@ -54,7 +54,6 @@ body.menu-is-open {
   text-decoration: none;
   color: black;
   backdrop-filter: blur(5px);
-  transition: opacity 5s; 
 }
 
 .navbar a:hover {

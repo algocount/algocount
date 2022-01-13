@@ -109,12 +109,11 @@ h4 {
 
 .intro{
   margin-top:5vh;
-  text-justify: newspaper;
 }
 
 .intro h1 {
   color: black;
-  font-size: 4.5em;
+  font-size: 3em;
   font-style: regular;
   line-height: 1.5em;
   font-weight: 600;
@@ -179,6 +178,7 @@ h4 {
 }
 
 .parallaxLayerBase {
+
   transform: translateZ(0);
   z-index: 4;
   -webkit-backdrop-filter: blur(10px);
@@ -186,6 +186,7 @@ h4 {
 }
 
 .parallaxLayerBack {
+
   transform: translateZ(-300px) scale(2);
   z-index: 3;
 }
@@ -229,7 +230,10 @@ h4 {
   .square2{
     top: 50%;
   }
- 
+
+  .navbar{
+    background-color: red;
+  }
 
 
   .parallaxLayerBack{
@@ -264,15 +268,59 @@ h4 {
 .parallaxLayerBack{
   transform: translateZ(-100px) scale(1);
 }
+/* 
+.parallaxLayer {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  right: 0;
+  bottom: 0%;
+}
+
+.parallax {
+  height: 80vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-perspective: 100px;
+  perspective: 100px;
+}
+
+.parallaxGroup {
+  position: relative;
+  height: 80vh;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.square1{
+  top: 50%;
+  width: 250px;
+  height: 250px;
+  backdrop-filter: blur(5px);
+  border: 1px solid black;
+  animation: gradient 15s ease infinite;
+}
+
+.square2{
+  top: 100%;
+  left:33%;
+  width: 250px;
+  height: 250px;
+  backdrop-filter: blur(5px);
+  border: 1px solid black;
+  animation: gradient 15s ease infinite;
+}
+ */
+
 }
 
 
 @media only screen and (max-width: 768px) {
   h1 {
-    font-size: 2.5em;
+    font-size: 2em;
   }
 .intro h1{
-  font-size: 2.5em;
+  font-size: 2em;
 }
   h2 {
     font-size: 1.5em;
